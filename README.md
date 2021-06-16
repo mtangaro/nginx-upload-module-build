@@ -8,7 +8,7 @@ Current Nginx version: 1.21.0
 CentOS 7
 --------
 
-* Install NGINX using the official NGINX CentOS7 repository, following the (documentation)[http://nginx.org/en/linux_packages.html#RHEL-CentOS]
+* Install NGINX using the official NGINX CentOS7 repository, following the [documentation](http://nginx.org/en/linux_packages.html#RHEL-CentOS)
 
 * Download the pkg-oss script to build the module
 
