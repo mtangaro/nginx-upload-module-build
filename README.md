@@ -12,45 +12,45 @@ CentOS 7
 
 * Download the pkg-oss script to build the module
 
-```
-wget https://hg.nginx.org/pkg-oss/raw-file/default/build_module.sh
-```
+  ```
+  wget https://hg.nginx.org/pkg-oss/raw-file/default/build_module.sh
+  ```
 
-and give it the right permissions:
+  and give it the right permissions:
 
-```
-chmod a+x build_module.sh
-``` 
+  ```
+  chmod a+x build_module.sh
+  ``` 
 
 * Build the module:
 
-```
-./build_module.sh -v 1.21.0 https://github.com/fdintino/nginx-upload-module.git
-```
+  ```
+  ./build_module.sh -v 1.21.0 https://github.com/fdintino/nginx-upload-module.git
+  ```
 
-the rpm will be located in the ``build-module-artifacts`` directory:
+  the rpm will be located in the ``build-module-artifacts`` directory:
 
-```
-$ ls build-module-artifacts/
-nginx-module-upload-1.21.0+1.0-1.el7.ngx.x86_64.rpm  nginx-module-upload-debuginfo-1.21.0+1.0-1.el7.ngx.x86_64.rpm
-```
+  ```
+  $ ls build-module-artifacts/
+  nginx-module-upload-1.21.0+1.0-1.el7.ngx.x86_64.rpm  nginx-module-upload-debuginfo-1.21.0+1.0-1.el7.ngx.x86_64.rpm
+  ```
 
 * Install it using rpm:
 
-```
-sudo rpm -i nginx-module-upload-1.21.0+1.0-1.el7.ngx.x86_64.rpm
-```
+  ```
+  sudo rpm -i nginx-module-upload-1.21.0+1.0-1.el7.ngx.x86_64.rpm
+  ```
 
-* Load the upload module, by editing the nginx configuration by adding
+* Load the upload module, by editing the nginx configuration by adding, with your favourite text editor:
 
-```
-load_module modules/ngx_http_upload_module.so;
-```
-in NGINX configuration file.
+  ```
+  load_module modules/ngx_http_upload_module.so;
+  ```
+  in NGINX configuration file.
 
 References
 ----------
 
-#. https://gorails.com/blog/how-to-compile-dynamic-nginx-modules
+* https://gorails.com/blog/how-to-compile-dynamic-nginx-modules
 
-#. https://www.nginx.com/blog/creating-installable-packages-dynamic-modules/
+* https://www.nginx.com/blog/creating-installable-packages-dynamic-modules/
