@@ -20,7 +20,7 @@ CentOS 7
 
   ```
   chmod a+x build_module.sh
-  ``` 
+  ```
 
 * Build the module:
 
@@ -41,7 +41,7 @@ CentOS 7
   sudo rpm -i nginx-module-upload-1.21.0+1.0-1.el7.ngx.x86_64.rpm
   ```
 
-* Load the upload module, by editing the nginx configuration by adding, with your favourite text editor:
+* Finally, load the upload module, by editing the nginx configuration by adding, with your favourite text editor:
 
   ```
   load_module modules/ngx_http_upload_module.so;
